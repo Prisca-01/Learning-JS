@@ -51,13 +51,54 @@
 
 // alert(result)
 
-let message = (login == 'Employee') ? 'Hello' :
-(login == 'Director') ? 'Greetings' :
-(login == '') ? 'No login' :
-'' ;
+// let message = (login == 'Employee') ? 'Hello' :
+// (login == 'Director') ? 'Greetings' :
+// (login == '') ? 'No login' :
+// '' ;
 
-if (age >= 14 && age <= 90);
+// if (age >= 14 && age <= 90);
 
-if (!(age >= 14 && age <= 90));
-if (age < 14 || age > 90);
+// if (!(age >= 14 && age <= 90));
+// if (age < 14 || age > 90);
 
+
+// MINE
+// let who = prompt("Who's there?", "");
+
+// if(value === '' || value === null){
+//     alert("Canceled");
+// } else if(value === "Admin"){
+
+//     let quest = prompt("Password?", "");
+
+//     if(value === '' || value === null){
+//         alert("Canceled");
+//     } else if(value === "TheMaster"){
+//         alert("Welcome!");
+//     } else {
+//         alert("Wrong password");
+// }
+// } else {
+//     alert("I don't know you");
+// }
+
+// CORRECTION
+let userName = prompt("Who's there?", '');
+
+if (userName === 'Admin') {
+
+  let pass = prompt('Password?', '');
+
+  if (pass === 'TheMaster') {
+    alert( 'Welcome!' );
+  } else if (pass === '' || pass === null) {
+    alert( 'Canceled' );
+  } else {
+    alert( 'Wrong password' );
+  }
+
+} else if (userName === '' || userName === null) {
+  alert( 'Canceled' );
+} else {
+  alert( "I don't know you" );
+}

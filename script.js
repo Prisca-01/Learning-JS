@@ -83,22 +83,109 @@
 // }
 
 // CORRECTION
-let userName = prompt("Who's there?", '');
+// let userName = prompt("Who's there?", '');
 
-if (userName === 'Admin') {
+// if (userName === 'Admin') {
 
-  let pass = prompt('Password?', '');
+//   let pass = prompt('Password?', '');
 
-  if (pass === 'TheMaster') {
-    alert( 'Welcome!' );
-  } else if (pass === '' || pass === null) {
-    alert( 'Canceled' );
-  } else {
-    alert( 'Wrong password' );
+//   if (pass === 'TheMaster') {
+//     alert( 'Welcome!' );
+//   } else if (pass === '' || pass === null) {
+//     alert( 'Canceled' );
+//   } else {
+//     alert( 'Wrong password' );
+//   }
+
+// } else if (userName === '' || userName === null) {
+//   alert( 'Canceled' );
+// } else {
+//   alert( "I don't know you" );
+// }
+
+// Output even numbers from 2-0 using for loop
+// for (let i = 0; i <= 10; i++) {
+
+//   if (i % 2 != 0) continue;
+
+//   alert(i);
+// }
+
+// for (let i = 2; i <= 10; i++) {
+
+//   if (i % 2 == 0) {
+
+//   alert(i);
+//   }
+// }
+
+// Replace 'for' with 'while'
+// for (let i = 0; i < 3; i++) {
+//   alert('number ${i}!');
+// }
+// Solution
+// let i = 0;
+// while (i < 3) {
+//   alert('number ${i}!');
+//   i++;
+// }
+
+// let num;
+
+// do {
+//   num = prompt("Enter a number greater than 100?", 0);
+// } while (num <= 100 && num);
+
+// SWITCH--IF
+// let browser = prompt('Browser?', '');
+
+// if (browser ==  'Edge'){
+//   alert ("You've got the Edge!");
+// } else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera'){
+//   alert ('Okay we support these browsers too');
+// } else {
+//   alert('We hope that this page looks ok!');
+// }
+
+// let a = +prompt('a?', '');
+
+// switch(a) {
+//   case '0':
+//     alert('0');
+//     break;
+
+//   case '1':
+//     alert('1');
+//     break;
+
+//   case '2':
+//   case '3':
+//     alert('2,3');
+// }
+
+// FUNCTIONS
+// function min(a,b) {
+//   if (a < b) {
+//     return a;
+//   } else {
+//     return b;
+//   }
+// }
+
+function pow(x,n) {
+  let result = x;
+
+  for(let i = 1; i < n; i++) {
+    result *= x;
   }
+  return result;
+}
 
-} else if (userName === '' || userName === null) {
-  alert( 'Canceled' );
+let x = prompt('x?', '');
+let n = prompt('n?', '');
+
+if(n < 1){
+  alert('Power ${n} is not supported, use a positive integer');
 } else {
-  alert( "I don't know you" );
+  alert(pow(x,n));
 }

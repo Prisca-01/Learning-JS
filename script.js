@@ -227,39 +227,120 @@
 
 // OBJECTS
 // 1
-let user = {}
-user.name = "John";
-user.surname = "Smith";
-user.name = "Pete";
-delete user[name];
+// let user = {}
+// user.name = "John";
+// user.surname = "Smith";
+// user.name = "Pete";
+// delete user[name];
 
 // 2
-function isEmpty(obj) {
-    for (let key in obj) {
-        return false;
-    }
-    return true;
-}
+// function isEmpty(obj) {
+//     for (let key in obj) {
+//         return false;
+//     }
+//     return true;
+// }
 
 // 3
-let salaries = {
-    John: 100,
-    Ann: 160,
-    Pete: 130
-  };
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130
+//   };
 
-let sum = 0;
-for (let key in salaries) {
-  sum += salaries[key];
-}
+// let sum = 0;
+// for (let key in salaries) {
+//   sum += salaries[key];
+// }
 
-alert(sum);
+// alert(sum);
 
 // 4
-function multiplyNumeric(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] == 'number') {
-            obj[key] *= 2;
-        }
-    }
+// function multiplyNumeric(obj) {
+//     for (let key in obj) {
+//         if (typeof obj[key] == 'number') {
+//             obj[key] *= 2;
+//         }
+//     }
+// }
+
+// CHATgpt
+// let calculator = {
+//   a: null,
+//   b: null,
+  
+//   read() {
+//     this.a = parseInt(prompt("Enter the first value: "));
+//     this.b = parseInt(prompt("Enter the second value: "));
+//   },
+  
+//   sum() {
+//     return this.a + this.b;
+//   },
+  
+//   mul() {
+//     return this.a * this.b;
+//   }
+// };
+
+// calculator.read();
+// alert("Sum: " + calculator.sum());
+// alert("Multiplication: " + calculator.mul());
+
+
+// let calculator = {
+//     read() {
+//         this.a = +prompt('a?', 0);
+//         this.b = +prompt('b?', 0);
+//     },
+
+//     sum() {
+//         return this.a + this.b;
+//     },
+
+//     mul() {
+//         return this.a * this.b;
+//     },
+// };
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+
+// let ladder = {
+//     step: 0,
+//     up() {
+//       this.step++;
+//       return this;
+//     },
+//     down() {
+//       this.step--;
+//       return this;
+//     },
+//     showStep: function() { // shows the current step
+//       alert( this.step );
+//       return this;
+//     }
+//   };
+
+//   CONSTRUCTOR FUNCTION
+function Calculator() {
+    this.read = function() {
+        this.a = +prompt('a?', 0);
+        this.b = +prompt('b?', 0);
+      };
+    
+      this.sum = function() {
+        return this.a + this.b;
+      };
+    
+      this.mul = function() {
+        return this.a * this.b;
+      };
 }
+
+let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+

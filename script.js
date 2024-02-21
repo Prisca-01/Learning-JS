@@ -1,10 +1,10 @@
 // alert("I'm JavaScript");
 
-// let admin;
-// let name = 'John';
+let admin;
+let person = 'John';
 
-// admin = name;
-// alert(admin);
+admin = person;
+console.log(admin);
 
 // let userName = prompt("What is your name?");
 // alert(userName);
@@ -15,7 +15,6 @@
 // alert(a + b); // 12
 
 // alert(undefined = NaN);
-
 
 // if statement task
 // let year = prompt('In which year was ECMAScript-2015 specification published?', '');
@@ -130,6 +129,19 @@
 //   i++;
 // }
 
+// let i = 0
+// while(i < 10){
+//     console.log(i)
+//     i++
+// }
+
+// for (let i = 0; 1 < 10; i++){
+//     console.log(i)
+// }
+const iterable = [1,2,3,4]
+for (const value of iterable) {
+    console.log(value)
+}
 // let num;
 
 // do {

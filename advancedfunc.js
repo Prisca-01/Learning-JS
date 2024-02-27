@@ -171,3 +171,20 @@ let printFullName= function() {
 
 //  function borrowing
 printFullName.call(name2)
+
+let pass = {
+  get password() {
+    return this._password;
+  },
+
+  set password(value) {
+    if (value.length < 6) {
+      console.log("Password is too short, need at least 6 characters");
+      return;
+    }
+    this._password = value; 
+  }
+};
+
+pass.password = "Ntott"
+pass.password = "";

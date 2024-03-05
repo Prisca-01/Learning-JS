@@ -1,5 +1,5 @@
 {
-  "name": "learning-js",
+  "name": "learning",
   "version": "1.0.0",
   "description": "To create a package.json file in my Learning JS",
   "main": "advancedfunc.js",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Prisca-01/Learning-JS/issues"
   },
-  "homepage": "https://github.com/Prisca-01/Learning-JS#readme"
+  "homepage": "https://github.com/Prisca-01/Learning-JS#readme",
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
 }

@@ -155,10 +155,10 @@ let {name, years: old, isAdmin = false} = user1;
 
 console.log(isAdmin)
 
-let firstName = "John"
-let lastName = "Doe"
+// let firstName = "John"
+// let lastName = "Doe"
 
- `${firstName} ${lastName}`
+//  `${firstName} ${lastName}`
 
 
 // let a = 4;
@@ -190,4 +190,18 @@ function add(num1, num2) {
 
     let result = num1 + num2;
     return result;
+}
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+showCircle(150, 150, 100, div => {
+  div.classList.add('message-ball');
+  div.append("Hello, world!");
+});
+
+function showCircle(cx, cy, radius) {
+  return promise = new Promise( resolve => )
 }

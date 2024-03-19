@@ -1,9 +1,10 @@
-import '/bling.js'
+import './utils/bling'
 import '/style.css'
 
 function app() {
-
-
+// state
+let state = {id: 0, todos:[]}
+// ui
 let ui = {
   input: $('input'),
   form: $('form'),
@@ -34,13 +35,20 @@ console.log(ui)
 
       const text = ui?.input.value;
 
-      if (!text) return;
+      if (!text) return; //protects the code from breaking
 
       const todo = { text, completed: false, id: Date.now()};
+      console.log(todo)
+
+      ui.input.value = '';
+
+      state.todos.push(todo);
+      console.log(state.todos)
 
       ui?.todos.prepend(createTodo(todo));
-    }
 
+    }
+// delete and update features
   }
 
 

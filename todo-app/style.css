@@ -95,11 +95,16 @@ button:focus-visible {
   }
 }
 
-/* css */
+/* CSS */
 .todo {
   /* display: flex; */
   align-items: center;
   justify-content: space-between;
   padding: 1em 0;
-  
+  border-bottom: 1px solid #444;
+  padding-left: 4px;
+}
+
+ul > li {
+  list-style-type: none;
 }

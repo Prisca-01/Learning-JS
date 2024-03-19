@@ -221,3 +221,21 @@ app.append(ul)
 // console.log(getComputedStyle($('.card')))
 // console.dir($('.card'))
 
+
+
+
+function mk(type, props, children) {
+  const el = document.createElement(type);
+  if (props) Object.assign(el, props);
+  if(children) el.prepend(...children);
+  return el;
+}
+
+let newForm = mk('form', null, [
+  mk('input', {type: 'text', name: 'name'}),
+  mk('button', {type: 'submit'}, ['Submit'])
+])
+
+console.log(newForm);
+
+app.append(newForm);

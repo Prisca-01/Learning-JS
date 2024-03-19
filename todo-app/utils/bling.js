@@ -18,17 +18,18 @@ Node.prototype.on = window.on = function (name, fn) {
 
 NodeList.prototype.__proto__ = Array.prototype;
 
-NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn) {
+// TODO: fix the eventlistener to accept a 3rd
+NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn, options) {
   this.forEach(function (elem, i) {
-    elem.on(name, fn);
+    elem.on(name, fn, options);
   });
 }
 
 function mk(type, props, children) {
-  const el = document.createElement(type);
-  if (props) Object.assign(el, props);
-  if (children) el.prepend(...children);
-  return el;
-}
-
-window.mk = mk;
+    const el = document.createElement(type);
+    if (props) Object.assign(el, props);
+    if (children) el.prepend(...children);
+    return el;
+  }
+  
+  window.mk = mk;

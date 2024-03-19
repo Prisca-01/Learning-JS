@@ -195,13 +195,3 @@ function add(num1, num2) {
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-
-showCircle(150, 150, 100, div => {
-  div.classList.add('message-ball');
-  div.append("Hello, world!");
-});
-
-function showCircle(cx, cy, radius) {
-  return promise = new Promise( resolve => )
-}
